@@ -1,0 +1,33 @@
+{
+  "name":             "kentr/pattern-lab-starterkit-twig-bootstrap4",
+  "description":      "Twig-based Bootstrap 4 StarterKit for Pattern Lab.",
+  "keywords":         ["twig", "pattern lab", "starterkit", "bootstrap"],
+  "homepage":         "https://github.com/kentr/pattern-lab-starterkit-twig-bootstrap4",
+  "license":          "MIT",
+  "type":             "patternlab-starterkit",
+  "authors": [
+    {
+      "name":         "Kent Richards",
+      "email":        "info@kentrichards.net",
+      "homepage":     "https://kentrichards.net",
+      "role":         "Lead Developer"
+    }
+  ],
+  "support": {
+    "issues":         "https://github.com/kentr/pattern-lab-starterkit-twig-bootstrap4/issues",
+    "source":         "https://github.com/kentr/pattern-lab-starterkit-twig-bootstrap4/releases"
+  },
+  "require": {
+    "pattern-lab/core": "^2.0.0",
+    "pattern-lab/patternengine-twig": "^2.0.0"
+  },
+  "extra": {
+    "patternlab": {
+      "dist": {
+        "sourceDir": [
+          { "*": "*" }
+        ]
+      }
+    }
+  }
+}
