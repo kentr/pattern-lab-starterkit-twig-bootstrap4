@@ -1,4 +1,7 @@
 {
+  "bootstrapVersion": "4.3.1",
+  "jqueryVersion": "3.3.1",
+  "popperVersion": "1.14.7",
   "key": "value",
   "key2": "use this for variables you want to load globally",
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
