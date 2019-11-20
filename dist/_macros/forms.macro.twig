@@ -22,12 +22,10 @@
 #}
 {% macro input(name, type, classes, label, placeholder, value, size, required) %}
     {% set show_label = label is not same as(false) %}
-    <div class="form-group">
         {% if show_label %}
             <label>{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
         {% endif %}
         <input class="form-control {{ classes }}" type="{{ type|default('text') }}" name="{{ name }}" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
-    </div>
 {% endmacro %}
 
 {#
@@ -46,10 +44,8 @@
 #}
 {% macro textarea(label, placeholder, rows, classes) %}
     {% set show_label = label is not same as(false) %}
-    <div class="form-group">
         {% if show_label %}
             <label for="exampleFormControlTextarea">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
         {% endif %}
         <textarea class="form-control {{ classes }}" id="exampleFormControlTextarea" placeholder="{{ placeholder|default(name|title) }}" rows="{{ rows|default(3) }}"{% if required %} required{% endif %}></textarea>
-    </div>
 {% endmacro %}
