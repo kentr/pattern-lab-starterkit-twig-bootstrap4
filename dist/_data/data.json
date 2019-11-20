@@ -9,27 +9,23 @@
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
   "img": {
     "landscape_4x3": {
-      "src": "../../images/fpo_4x3.png",
+      "src": "https://ipsumimage.appspot.com/600x450?l=600x450%7C4:3&s=40",
       "alt": "4x3 Image"
     },
     "landscape_16x9": {
-      "src": "../../images/fpo_16x9.png",
+      "src": "https://ipsumimage.appspot.com/1280x720?l=1280x720%7C16:9&s=40",
       "alt": "16x9 Image"
     },
     "square": {
-      "src": "../../images/fpo_square.png",
+      "src": "https://ipsumimage.appspot.com/600",
       "alt": "Square Thumbnail"
     },
     "avatar" : {
       "src" : "../../images/fpo_avatar.png",
       "alt" : "Person Name"
     },
-    "rectangle": {
-      "src": "http://placeimg.com/400/300/tech",
-      "alt": "Rectangle"
-    },
     "thumbnail": {
-      "src": "https://placeimg.com/200/200/nature",
+      "src": "https://ipsumimage.appspot.com/200",
       "alt": "Thumbnail"
     }
   },
