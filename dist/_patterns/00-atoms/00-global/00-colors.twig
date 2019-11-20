@@ -1,0 +1,10 @@
+
+
+<ul class="sg-colors">
+{% for color in colorCodes %}
+	<li>
+		<span class="sg-swatch  bg-{{ color }}"></span>
+		<span class="sg-label">{{ color|title }}</span>
+	</li>
+{% endfor %}
+</ul>
