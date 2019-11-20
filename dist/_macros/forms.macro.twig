@@ -1,3 +1,26 @@
+{#
+  Creates a basic form text input.
+
+  @param string name
+    String to use for the `name` attribute.
+  @param string type
+    String to use for the `type` attribute.
+  @param string classes
+    String to be added to the `class` attribute of the wrapper and the
+    label.
+  @param string label
+    String to be added to the `label` attribute.  If omitted, the `name`
+    parameter will be used.
+    If `false`, the label will be omitted.
+  @param string placeholder
+    String to use for the `placeholder` attribute.
+  @param string size
+    String to use for the `size` attribute.
+  @param string|integer size
+    String or integer to use for the `size` attribute.
+  @param boolean required
+    If true, the field will have the `required` attribute.
+#}
 {% macro input(name, type, classes, label, placeholder, value, size, required) %}
     {% set show_label = label is not same as(false) %}
     <div class="form-group {{ classes }}">
@@ -9,6 +32,21 @@
     </div>
 {% endmacro %}
 
+{#
+  Creates a basic form textarea.
+
+  @param string label
+    String to be added to the `label` attribute.  If omitted, the `name`
+    parameter will be used.
+    If `false`, the label will be omitted.
+  @param string placeholder
+    String to use for the `placeholder` attribute.
+  @param string rows
+    String to use for the `rows` attribute.
+  @param string classes
+    String to be added to the `class` attribute of the wrapper and the
+    label.
+#}
 {% macro textarea(label, placeholder, rows, classes) %}
     {% set show_label = label is not same as(false) %}
     <div class="form-group {{ classes }}">
