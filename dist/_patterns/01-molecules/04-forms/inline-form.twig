@@ -1,0 +1,28 @@
+{#
+  Simple inline form.
+  See https://getbootstrap.com/docs/4.3/components/forms/#inline-forms
+#}
+<form class="form-inline">
+  {# @todo Refactor forms.input() to use `sr-only` for the label? #}
+  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  {{ forms.input('name', 'text', 'mb-2 mr-sm-2', false, 'Jane Doe') }}
+
+  {# @todo Refactor forms.input() to use `sr-only` for the label? #}
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
+    {{ forms.input('username', 'text', '', false, 'Username') }}
+  </div>
+
+  {# @todo use an atom for this. #}
+  <div class="form-check mb-2 mr-sm-2">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+    <label class="form-check-label" for="inlineFormCheck">
+      Remember me
+    </label>
+  </div>
+
+  {{ buttons.button("btn-primary mb-2", "Submit") }}
+</form>
