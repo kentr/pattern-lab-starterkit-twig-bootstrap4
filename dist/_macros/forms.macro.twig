@@ -25,10 +25,9 @@
     {% set show_label = label is not same as(false) %}
     <div class="form-group {{ classes }}">
         {% if show_label %}
-            <label class="{{ classes }}">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}
+            <label class="{{ classes }}">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
         {% endif %}
         <input class="form-control" type="{{ type|default('text') }}" name="{{ name }}" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
-        {% if show_label %}</label>{% endif %}
     </div>
 {% endmacro %}
 
