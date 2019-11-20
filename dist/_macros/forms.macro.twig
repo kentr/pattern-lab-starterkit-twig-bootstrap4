@@ -6,8 +6,7 @@
   @param string type
     String to use for the `type` attribute.
   @param string classes
-    String to be added to the `class` attribute of the wrapper and the
-    label.
+    String to be added to the `class` attribute.
   @param string label
     String to be added to the `label` attribute.  If omitted, the `name`
     parameter will be used.
@@ -23,11 +22,11 @@
 #}
 {% macro input(name, type, classes, label, placeholder, value, size, required) %}
     {% set show_label = label is not same as(false) %}
-    <div class="form-group {{ classes }}">
+    <div class="form-group">
         {% if show_label %}
-            <label class="{{ classes }}">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
+            <label>{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
         {% endif %}
-        <input class="form-control" type="{{ type|default('text') }}" name="{{ name }}" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
+        <input class="form-control {{ classes }}" type="{{ type|default('text') }}" name="{{ name }}" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
     </div>
 {% endmacro %}
 
@@ -43,15 +42,14 @@
   @param string rows
     String to use for the `rows` attribute.
   @param string classes
-    String to be added to the `class` attribute of the wrapper and the
-    label.
+    String to be added to the `class` attribute.
 #}
 {% macro textarea(label, placeholder, rows, classes) %}
     {% set show_label = label is not same as(false) %}
-    <div class="form-group {{ classes }}">
+    <div class="form-group">
         {% if show_label %}
-            <label for="exampleFormControlTextarea" class="{{ classes }}">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr></label>{% endif %}
+            <label for="exampleFormControlTextarea">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
         {% endif %}
-        <textarea class="form-control" id="exampleFormControlTextarea" placeholder="{{ placeholder|default(name|title) }}" rows="{{ rows|default(3) }}"{% if required %} required{% endif %}></textarea>
+        <textarea class="form-control {{ classes }}" id="exampleFormControlTextarea" placeholder="{{ placeholder|default(name|title) }}" rows="{{ rows|default(3) }}"{% if required %} required{% endif %}></textarea>
     </div>
 {% endmacro %}
