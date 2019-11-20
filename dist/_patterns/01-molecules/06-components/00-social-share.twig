@@ -1,0 +1,29 @@
+{%
+set items = [
+  {
+    "icon": "facebook",
+    "text": "Like"
+  },
+  {
+    "icon": "twitter",
+    "text": "Tweet"
+  },
+  {
+    "icon": "instagram",
+    "text": "Share on Instagram"
+  },
+  {
+    "icon": "envelope",
+    "text": "Email"
+  }
+]
+%}
+
+<div class="social-share">
+	<ul class="list-inline">
+  {% for item in items %}
+		<li class="list-inline-item"><a href="{{ url }}"><i class="fa fa-{{ item.icon }}"></i><span
+		class="sr-only">{{ item.text }}</span></a></li>
+  {% endfor %}
+	</ul>
+</div>
