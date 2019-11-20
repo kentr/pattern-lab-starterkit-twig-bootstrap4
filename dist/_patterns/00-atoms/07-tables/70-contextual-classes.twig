@@ -1,0 +1,63 @@
+{# See https://getbootstrap.com/docs/4.3/content/tables/#contextual-classes #}
+
+{% set colorCodes = ["active"]|merge(colorCodes) %}
+<table class="table">
+  <!-- On rows -->
+  <thead>
+    <tr>
+      <th scope="col">Class</th>
+      <th scope="col">Scope</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for color in colorCodes %}
+    <tr class="table-{{ color }}"><th>{{ color|title }}</th><td>Row</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<table class="table">
+  <!-- On cells -->
+
+  <thead>
+    <tr>
+      <th>Class</th>
+    {% for color in colorCodes %}
+      <th class="table-{{ color }}">{{ color|title }}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Scope</th>
+    {% for color in colorCodes %}
+      <td class="table-{{ color }}">Cell</td>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>
+
+  {# <tr class="table-active">Cell</tr>
+
+  <tr class="table-primary">Cell</tr>
+  <tr class="table-secondary">Cell</tr>
+  <tr class="table-success">Cell</tr>
+  <tr class="table-danger">Cell</tr>
+  <tr class="table-warning">Cell</tr>
+  <tr class="table-info">Cell</tr>
+  <tr class="table-light">Cell</tr>
+  <tr class="table-dark">Cell</tr>
+
+  <!-- On cells (`td` or `th`) -->
+  <tr>
+    <td class="table-active">Cell</td>
+
+    <td class="table-primary">Cell</td>
+    <td class="table-secondary">Cell</td>
+    <td class="table-success">Cell</td>
+    <td class="table-danger">Cell</td>
+    <td class="table-warning">Cell</td>
+    <td class="table-info">Cell</td>
+    <td class="table-light">Cell</td>
+    <td class="table-dark">Cell</td>
+  </tr> #}

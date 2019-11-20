@@ -4,8 +4,16 @@
   "popperVersion": "1.14.7",
   "fontAwesomeVersion": "4.7.0",
   "fontStackPrimary": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
-  "key": "value",
-  "key2": "use this for variables you want to load globally",
+  "colorCodes": [
+    "primary",
+    "secondary",
+    "success",
+    "danger",
+    "warning",
+    "info",
+    "light",
+    "dark"
+  ],
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
   "img": {
     "landscape_4x3": {
