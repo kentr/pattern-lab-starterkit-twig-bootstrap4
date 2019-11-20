@@ -1,0 +1,15 @@
+{% extends "@templates/00-layouts/00-site.twig" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        {% block main %}
+            <p>Content Placeholder</p>
+        {% endblock %}
+    </div>
+    <div class="col-md-4">
+        {% block sidebar %}
+            <h3>Sidebar</h3>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

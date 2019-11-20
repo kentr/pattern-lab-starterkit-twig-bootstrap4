@@ -1,0 +1,11 @@
+{% extends "@templates/00-layouts/01-page-2col.twig" %}
+{% block main %}
+    <article class="article">
+        <header class="article-header">
+            <h1>Article Headline Lorem ipsum dolor sit aweofij</h1>
+            {% include "molecules-byline" %}
+        </header>
+        {% include "organisms-article-body" %}
+    </article><!--end .article-->
+    {% include "molecules-social-share" %}
+{% endblock %}
