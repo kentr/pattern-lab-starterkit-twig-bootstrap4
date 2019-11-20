@@ -2,6 +2,10 @@
 
 {% macro table(classes, caption) %}
   <table class="table {{ classes }}">
+  {% if caption %}
+  <caption>{{ caption }}</caption>
+  {% endif %}
+
     <thead>
       <tr>
         <th scope="col">#</th>
