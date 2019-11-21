@@ -1,10 +1,10 @@
-{% extends "@templates/00-layouts/01-page-2col.twig" %}
+{% extends "@templates/00-layouts/01-page-1col.twig" %}
 {% block hero %}
     {% if emergency %}
         {% include "@molecules/07-messaging/00-alert.twig" with emergency %}
     {% endif %}
     {% if hero %}
-        {% include "@molecules/02-blocks/02-block-hero.twig" %}
+        {% include "molecules-block-hero" %}
     {% endif %}
 
     <div class="g g-3up">
