@@ -1,5 +1,9 @@
 .DS_Store
+config/*
+core/*
 export/*
 public/*
 source/styleguide/*
 vendor/*
+
+composer.lock
