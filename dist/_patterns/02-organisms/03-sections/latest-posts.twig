@@ -1,0 +1,14 @@
+<section>
+    <h2>Latest Posts</h2>
+    <div role="list">
+    {% for i in 0..5 %}
+      {#
+        Though `list-item` could be in `article-summary`, keeping it
+        here makes `article-summary` more reusable.
+      #}
+      <div role="list-item" >
+      {% include "molecules-article-summary" %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

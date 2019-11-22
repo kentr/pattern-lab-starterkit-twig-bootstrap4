@@ -1,0 +1,15 @@
+{#
+  Summary of article item, such as for an archive / listing page.
+  Layout inspired by https://getbootstrap.com/docs/4.3/examples/blog/.
+#}
+<article class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+  <div class="col p-4 d-flex flex-column position-static">
+    <h3 class="mb-0">This is the article title</h3>
+    {% include "molecules-byline" %}
+    <p class="mb-auto">{{ excerpt.medium }}</p>
+    <a href="{{ url }}" class="stretched-link">Continue reading</a>
+  </div>
+  <div class="col-auto d-none d-lg-block">
+    <img src="{{ img.thumbnail.src }}" alt="{{ img.thumbnail.alt }}" />
+  </div>
+</article>

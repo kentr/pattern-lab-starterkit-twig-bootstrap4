@@ -1,1 +1,9 @@
-<div class="byline">by {{ name.first }} {{ name.last }}</div>
+{# Author with optional date. #}
+
+<div class="mb-1 text-muted">
+  by {{ name.first }} {{ name.last }}
+
+  {%- if date|default(true) -%}
+  , {{ month.short }} {{ day.short }}, {{ year.long }}
+  {%- endif %}
+</div>
