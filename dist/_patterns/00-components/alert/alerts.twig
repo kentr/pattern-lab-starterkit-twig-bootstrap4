@@ -1,3 +1,15 @@
 {% for color in colorCodes %}
-  {% include "@atoms/messaging/_alert.twig" with {"styleModifier":color} %}
+  {% embed "_bootstrap-alert" with {
+    "type": color,
+    "content": "This is a dismissable #{ color } alert."
+  } %}
+  {% endembed %}
 {% endfor %}
+
+{% set color = "danger" %}
+{% embed "_bootstrap-alert" with {
+  "type": color,
+  "heading": "#{ color|capitalize }!",
+  "content": "This is a #{ color } alert with a heading."
+} %}
+{% endembed %}
