@@ -5,6 +5,7 @@
  *
  * Available config:
  * - utility_classes: An array of utility classes.
+ * - header_type: light | dark
  */
 #}
 
@@ -30,7 +31,7 @@
   {% endfor %}
 
   {% if header %}
-    <thead>
+      <thead{% if header_type %} class="thead-{{ header_type }}"{% endif %}>
     <tr>
       {% for cell in header %}
       {%
