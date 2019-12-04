@@ -84,5 +84,10 @@
     "long": "20",
     "short": "20"
   },
-  "seconds": "31"
+  "seconds": "31",
+  "attributes": {
+    "Attribute()": {
+      "class": ["test"]
+    }
+  }
 }
