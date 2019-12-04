@@ -94,7 +94,28 @@
     "header": [
       {
         "tag": "th",
-        "content": "Header",
+        "content": "#",
+        "attributes": {
+          "Attribute()": {}
+        }
+      },
+      {
+        "tag": "th",
+        "content": "Col 1",
+        "attributes": {
+          "Attribute()": {}
+        }
+      },
+      {
+        "tag": "th",
+        "content": "Col 2",
+        "attributes": {
+          "Attribute()": {}
+        }
+      },
+      {
+        "tag": "th",
+        "content": "Col 3",
         "attributes": {
           "Attribute()": {}
         }
@@ -106,6 +127,98 @@
           "Attribute()": {}
         },
         "cells": [
+          {
+            "tag": "th",
+            "content": "1",
+            "attributes": {
+              "Attribute()": {
+                "span": "row"
+              }
+            }
+          },
+          {
+            "tag": "td",
+            "content": "cell",
+            "attributes": {
+              "Attribute()": {}
+            }
+          },
+          {
+            "tag": "td",
+            "content": "cell",
+            "attributes": {
+              "Attribute()": {}
+            }
+          },
+          {
+            "tag": "td",
+            "content": "cell",
+            "attributes": {
+              "Attribute()": {}
+            }
+          }
+        ]
+      },
+      {
+        "attributes": {
+          "Attribute()": {}
+        },
+        "cells": [
+          {
+            "tag": "th",
+            "content": "2",
+            "attributes": {
+              "Attribute()": {
+                "span": "row"
+              }
+            }
+          },
+          {
+            "tag": "td",
+            "content": "cell",
+            "attributes": {
+              "Attribute()": {}
+            }
+          },
+          {
+            "tag": "td",
+            "content": "cell",
+            "attributes": {
+              "Attribute()": {}
+            }
+          },
+          {
+            "tag": "td",
+            "content": "cell",
+            "attributes": {
+              "Attribute()": {}
+            }
+          }
+        ]
+      },
+      {
+        "attributes": {
+          "Attribute()": {}
+        },
+        "cells": [
+          {
+            "tag": "th",
+            "content": "3",
+            "attributes": {
+              "Attribute()": {
+                "span": "row"
+              }
+            }
+          },
+          {
+            "tag": "td",
+            "content": "2-column cell",
+            "attributes": {
+              "Attribute()": {
+                "colspan": "2"
+              }
+            }
+          },
           {
             "tag": "td",
             "content": "cell",
