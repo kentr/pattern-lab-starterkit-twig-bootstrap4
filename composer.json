@@ -21,6 +21,37 @@
     "pattern-lab/core": "^2.0.0",
     "pattern-lab/patternengine-twig": "^2.0.0"
   },
+  "autoload": {
+    "psr-0": {
+        "PatternLab":   "core/src/"
+    }
+  },
+  "scripts": {
+    "server": "php core/console --server",
+    "generate": "php core/console --generate",
+    "watch": "php core/console --watch",
+    "start": "php core/console --server  --quiet & php core/console --watch",
+    "post-install-cmd": [
+      "PatternLab\\Installer::postInstallCmd"
+    ],
+    "post-update-cmd": [
+      "PatternLab\\Installer::postUpdateCmd"
+    ],
+    "post-root-package-install": [
+      "PatternLab\\Installer::setProjectInstall",
+      "PatternLab\\Installer::getSuggestedStarterKits",
+      "PatternLab\\Installer::getConfigOverrides"
+    ],
+    "post-package-install": [
+      "PatternLab\\Installer::postPackageInstall"
+    ],
+    "post-package-update": [
+      "PatternLab\\Installer::postPackageUpdate"
+    ],
+    "pre-package-uninstall": [
+      "PatternLab\\Installer::prePackageUninstall"
+    ]
+  },
   "extra": {
     "patternlab": {
       "dist": {
