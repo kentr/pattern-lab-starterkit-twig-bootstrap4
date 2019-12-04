@@ -1,3 +1,7 @@
-{# See https://getbootstrap.com/docs/4.3/content/tables/#examples #}
+{% embed "_bootstrap-table" with {
+  header: table.header,
+  rows: table.rows,
+  caption: table.caption
+} %}
 
-{{ tables.table('', 'List of users') }}
+{% endembed %}

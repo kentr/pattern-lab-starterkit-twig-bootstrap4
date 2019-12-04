@@ -89,5 +89,33 @@
     "Attribute()": {
       "class": ["test"]
     }
+  },
+  "table": {
+    "header": [
+      {
+        "tag": "th",
+        "content": "Header",
+        "attributes": {
+          "Attribute()": {}
+        }
+      }
+    ],
+    "rows": [
+      {
+        "attributes": {
+          "Attribute()": {}
+        },
+        "cells": [
+          {
+            "tag": "td",
+            "content": "cell",
+            "attributes": {
+              "Attribute()": {}
+            }
+          }
+        ]
+      }
+    ],
+    "caption": "This is the table caption"
   }
 }
