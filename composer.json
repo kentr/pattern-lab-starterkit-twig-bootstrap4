@@ -19,7 +19,8 @@
   },
   "require": {
     "pattern-lab/core": "^2.0.0",
-    "pattern-lab/patternengine-twig": "^2.0.0"
+    "pattern-lab/patternengine-twig": "^2.0.0",
+    "aleksip/plugin-data-transform": "^1.4"
   },
   "autoload": {
     "psr-0": {
