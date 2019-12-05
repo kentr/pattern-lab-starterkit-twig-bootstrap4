@@ -36,7 +36,10 @@
           item.in_active_trail ? 'active',
           item.is_expanded and item.below ? 'dropdown'
         ] %}
-        {% set nav_link_classes = ['nav-link'] %}
+        {% set nav_link_classes = [
+          'nav-link',
+          item.in_active_trail ? 'active'
+        ] %}
         {% if item.url.options.attributes.class %}
           {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
         {% endif %}
