@@ -1,30 +1,21 @@
-{# See https://getbootstrap.com/docs/4.3/components/navbar/ #}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="{{ url }}">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ url }}">Active <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url }}">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url }}">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{{ url }}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{ url }}">Action</a>
-          <a class="dropdown-item" href="{{ url }}">Another action</a>
-          <a class="dropdown-item" href="{{ url }}">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+{% embed '_bootstrap-navbar' with {
+  color: 'light',
+  utility_classes: ['bg-light'],
+} %}
+
+  {% block branding %}
+    <a class="navbar-brand w-25 p-0 mr-0 mr-lg-2" href="{{ url }}">
+    {% include "components-logo" with {utility_classes: []} %}
+    </a>
+  {% endblock %}
+
+  {% block left %}
+      <div class="mr-auto">
+        {% include "_bootstrap-nav" with {
+          items: nav_items,
+          utility_classes: ['navbar-nav']
+        } %}
+      </div>
+  {% endblock %}
+
+{% endembed %}
