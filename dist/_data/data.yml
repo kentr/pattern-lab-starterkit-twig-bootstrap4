@@ -76,6 +76,24 @@ name:
   lasti: K
   middle: Marius
   middlei: M
+nav_items:
+  - title: "Nav Item"
+    url: "#"
+  - title: "Nav Item (active)"
+    url: "#"
+    in_active_trail: true
+  - title: "Nav Item"
+    url: "#"
+  - title: "Item with Sub-Nav"
+    url: "#"
+    is_expanded: true
+    below:
+      - title: "Sub-Nav Item"
+        url: "#"
+      - title: "Sub-Nav Item"
+        url: "#"
+  - title: "Nav Item (disabled)"
+    url: "#"
 popperVersion: 1.14.7
 seconds: '31'
 table:
@@ -160,4 +178,3 @@ url: '#'
 year:
   long: '2013'
   short: '13'
-
