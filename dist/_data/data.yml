@@ -92,8 +92,6 @@ nav_items:
         url: "#"
       - title: "Sub-Nav Item"
         url: "#"
-  - title: "Nav Item (disabled)"
-    url: "#"
 popperVersion: 1.14.7
 seconds: '31'
 table:
