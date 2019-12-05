@@ -86,9 +86,7 @@
   },
   "seconds": "31",
   "attributes": {
-    "Attribute()": {
-      "class": ["test"]
-    }
+    "Attribute()": {}
   },
   "table": {
     "header": [
