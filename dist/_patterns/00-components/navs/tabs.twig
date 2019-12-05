@@ -1,3 +1,5 @@
-{# See https://getbootstrap.com/docs/4.3/components/navs/#base-nav #}
-
-{% include '@molecules/05-navigation/00-base-nav.twig' with {'styleModifier':'tabs'} %}
+{% embed "_bootstrap-nav" with {
+  items: nav_items,
+  style: "tabs"
+} %}
+{% endembed %}
