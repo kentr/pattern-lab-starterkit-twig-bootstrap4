@@ -16,5 +16,9 @@
     {% include 'components-checkbox' %}
   </div>
 
-  {{ buttons.button("btn-primary", "Submit") }}
+  {% include "_bootstrap-button" with {
+    html_tag: "input",
+    type: "primary",
+    attributes: attributes.setAttribute("value", "Submit")
+  } %}
 </form>
