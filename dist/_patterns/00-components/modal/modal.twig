@@ -10,16 +10,31 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+          {% include "_bootstrap-button" with {
+            html_tag: "button",
+            content: '<span aria-hidden="true">&times;</span>',
+            attributes: close_x_attributes
+              .setAttribute("data-dismiss", "modal")
+              .setAttribute("aria-label", "close")
+              .addClass("close")
+          } %}
       </div>
       <div class="modal-body">
-        ...
+        This is the body of the modal.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        {% include "_bootstrap-button" with {
+          html_tag: "button",
+          type: "secondary",
+          content: "Close",
+          attributes: close_button_attributes
+            .setAttribute("data-dismiss", "modal")
+        } %}
+        {% include "_bootstrap-button" with {
+          html_tag: "button",
+          type: "primary",
+          content: "Do something"
+        } %}
       </div>
     </div>
   </div>
