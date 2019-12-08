@@ -1,0 +1,8 @@
+{# See https://getbootstrap.com/docs/4.3/content/tables/#striped-rows #}
+
+{% embed "_bootstrap-table" with {
+  header: table.header,
+  rows: table.rows,
+  utility_classes: ['table-striped']
+} %}
+{% endembed %}

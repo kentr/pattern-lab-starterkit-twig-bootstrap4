@@ -1,0 +1,178 @@
+attributes:
+  Attribute(): {}
+bootstrapVersion: 4.3.1
+colorCodes:
+- primary
+- secondary
+- success
+- danger
+- warning
+- info
+- light
+- dark
+day:
+  long: '01'
+  ordinal: st
+  short: '1'
+dayofweek:
+  long: Sunday
+  short: Sun
+description: So, setting about it as methodically as men might smoke out a wasps'
+  nest, the Martians spread this strange stifling vapour over the Londonward country.
+  The horns of the crescent slowly moved apart, until at last they formed a line from
+  Hanwell to Coombe and Malden. All night through their destructive tubes advanced.
+excerpt:
+  long: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+    deserunt mollit anim id est laborum.
+  medium: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  short: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+fontAwesomeVersion: 4.7.0
+fontStackPrimary: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto
+  Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color
+  Emoji"
+headline:
+  medium: Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)
+  short: Lorem ipsum dolor sit (37 characters)
+hour:
+  ampm: am
+  long: '06'
+  military: '06'
+  short: '6'
+img:
+  avatar:
+    alt: Person Name
+    src: ../../images/fpo_avatar.png
+  landscape_16x9:
+    alt: 16x9 Image
+    src: https://fpoimg.com/1280x720?text=(16:9)
+  landscape_4x3:
+    alt: 4x3 Image
+    src: https://fpoimg.com/600x450?text=(4:3)
+  square:
+    alt: Square Thumbnail
+    src: https://fpoimg.com/600x600?text=(1:1)
+  thumbnail:
+    alt: Thumbnail
+    src: https://fpoimg.com/200x200?text=(1:1)
+jqueryVersion: 3.3.1
+minute:
+  long: '20'
+  short: '20'
+month:
+  digit: '01'
+  long: January
+  short: Jan
+name:
+  first: Junius
+  firsti: J
+  last: Koolen
+  lasti: K
+  middle: Marius
+  middlei: M
+nav_items:
+  - title: "Nav Item"
+    url: "#"
+  - title: "Nav Item (active)"
+    url: "#"
+    in_active_trail: true
+  - title: "Nav Item"
+    url: "#"
+  - title: "Item with Sub-Nav"
+    url: "#"
+    is_expanded: true
+    below:
+      - title: "Sub-Nav Item"
+        url: "#"
+      - title: "Sub-Nav Item"
+        url: "#"
+popperVersion: 1.14.7
+seconds: '31'
+table:
+  caption: This is the table caption
+  header:
+  - attributes:
+      Attribute(): {}
+    content: '#'
+    tag: th
+  - attributes:
+      Attribute(): {}
+    content: Col 1
+    tag: th
+  - attributes:
+      Attribute(): {}
+    content: Col 2
+    tag: th
+  - attributes:
+      Attribute(): {}
+    content: Col 3
+    tag: th
+  rows:
+  - attributes:
+      Attribute(): {}
+    cells:
+    - attributes:
+        Attribute():
+          span: row
+      content: '1'
+      tag: th
+    - attributes:
+        Attribute(): {}
+      content: cell
+      tag: td
+    - attributes:
+        Attribute(): {}
+      content: cell
+      tag: td
+    - attributes:
+        Attribute(): {}
+      content: cell
+      tag: td
+  - attributes:
+      Attribute(): {}
+    cells:
+    - attributes:
+        Attribute():
+          span: row
+      content: '2'
+      tag: th
+    - attributes:
+        Attribute(): {}
+      content: cell
+      tag: td
+    - attributes:
+        Attribute(): {}
+      content: cell
+      tag: td
+    - attributes:
+        Attribute(): {}
+      content: cell
+      tag: td
+  - attributes:
+      Attribute(): {}
+    cells:
+    - attributes:
+        Attribute():
+          span: row
+      content: '3'
+      tag: th
+    - attributes:
+        Attribute():
+          colspan: '2'
+      content: 2-column cell
+      tag: td
+    - attributes:
+        Attribute(): {}
+      content: cell
+      tag: td
+title: Pattern Lab Bootstrap 4
+url: '#'
+year:
+  long: '2013'
+  short: '13'

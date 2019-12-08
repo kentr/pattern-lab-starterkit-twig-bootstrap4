@@ -1,0 +1,21 @@
+{% embed '_bootstrap-navbar' with {
+  color: 'light',
+  utility_classes: ['bg-light'],
+} %}
+
+  {% block branding %}
+    <a class="navbar-brand w-25 p-0 mr-0 mr-lg-2" href="{{ url }}">
+    {% include "components-logo" with {utility_classes: []} %}
+    </a>
+  {% endblock %}
+
+  {% block left %}
+      <div class="mr-auto">
+        {% include "_bootstrap-nav" with {
+          items: nav_items,
+          utility_classes: ['navbar-nav']
+        } %}
+      </div>
+  {% endblock %}
+
+{% endembed %}

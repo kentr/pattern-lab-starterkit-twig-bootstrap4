@@ -1,0 +1,15 @@
+---
+# Data for `modal.twig`
+
+# Instantiate separate `attributes` objects for buttons.
+# Otherwise, the changes to `attributes` from the first button bleed
+# over into the subsequent buttons.
+# I'm guessing this is due to PHP's handling of objects (using
+# identifiers).
+#
+# The actual attributes are set in `modal.twig`, to keep the
+# configuration in one place.
+close_x_attributes:
+  Attribute(): {}
+close_button_attributes:
+  Attribute(): {}

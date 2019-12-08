@@ -1,0 +1,7 @@
+{% for type in colorCodes %}
+  {% embed "_bootstrap-button" with {
+    type: type,
+    content: "#{ type|capitalize }"
+  } %}
+  {% endembed %}
+{% endfor %}

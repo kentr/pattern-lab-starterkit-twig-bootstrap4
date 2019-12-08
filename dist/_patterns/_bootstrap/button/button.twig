@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Template for a button component.
+ *
+ * Available config:
+ * - type: primary | secondary | success | danger | warning | info |
+ *     light | dark | link.
+ * - size: sm | lg
+ * - outline: true | false.  If `type` is "link", then `outline` will be
+ *     ignored and button class will be `btn-link`.
+ * - html_tag: button | a | input. The HTML tag to use for the button.
+ *     Defaults to "button".
+ * - content: The content of the button. For `input` buttons, this is
+ *     ignored and `attributes.value` is used.
+ *     For other buttons, can be any markup that is permitted by the HTML
+ *     specification.  If empty, will use any value that is in
+ *     `attributes.value`.
+ * - utility_classes: An array of utility classes.
+ * - url: The URL for a link button.  Ignored for other button types.
+ * - disabled: true | false.  Make button disabled.
+ *     If true, will automatically set the `disabled` attribute on
+ *     non-link buttons.
+ */
+#}
+{# {% set attributes = attributes ?? create_attribute() %} #}
+{% set html_tag = html_tag ?? 'button' %}
+{% set content = content ?? attributes.value %}
+
+{% set css_classes = [
+  'btn',
+  (outline and type != 'link' ? 'btn-outline-' : 'btn-') ~ type,
+  size ? 'btn-' ~ size,
+]|merge(utility_classes ? utility_classes : []) %}
+
+{#
+  Setup for disabled buttons.
+  The `disabled` parameter overrides `attributes.disabled`.
+  It's a little redundant to reset `attributes.disabled` below, but this
+  simplifies the logic.
+
+  @see https://getbootstrap.com/docs/4.4/components/buttons/#disabled-state
+#}
+{% if disabled or attributes.disabled %}
+
+  {% set attributes = attributes.setAttribute('aria-disabled', 'true') %}
+
+  {% if html_tag == 'a' %}
+    {#
+      These could probably apply to all elements, but the docs only
+      specify them for `a`.
+    #}
+    {% set css_classes = css_classes|merge(['disabled']) %}
+    {% set attributes = attributes.setAttribute('tabindex', '-1') %}
+  {% else %}
+    {% set attributes = attributes.setAttribute('disabled', true) %}
+  {% endif %}
+{% endif %}
+
+{% if html_tag == 'input' %}
+  <input{{ attributes.addClass(css_classes) }} />
+{% elseif html_tag == 'a' %}
+  <a href="{{ url }}"{{ attributes.addClass(css_classes) }}>{{ content }}</a>
+{% else %}
+  <{{ html_tag }}{{ attributes.addClass(css_classes) }}>{{ content }}</{{ html_tag }}>
+{% endif %}
