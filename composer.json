@@ -1,6 +1,7 @@
 {
   "name":             "kentr/pattern-lab-starterkit-twig-bootstrap4",
   "description":      "Twig-based Bootstrap 4 StarterKit for Pattern Lab.",
+  "version":          "1.0.0-alpha",
   "keywords":         ["twig", "pattern lab", "starterkit", "bootstrap"],
   "homepage":         "https://github.com/kentr/pattern-lab-starterkit-twig-bootstrap4",
   "license":          "MIT",
