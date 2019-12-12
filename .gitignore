@@ -8,3 +8,4 @@ source/styleguide/*
 vendor/*
 
 composer.lock
+node_modules
