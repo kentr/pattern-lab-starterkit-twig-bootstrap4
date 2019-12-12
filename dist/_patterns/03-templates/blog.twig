@@ -1,7 +1,7 @@
-{% extends "templates-page-2col" %}
+{% extends "@templates/00-layouts/01-page-2col.twig" %}
 {% block title %}<h1>Our Blog</h1>{% endblock %}
-
+ 
 {% block main %}
-    {% include "organisms-latest-posts" %}
-    {% include "molecules-pagination" %}
+    {% include "@organisms/03-sections/latest-posts.twig" %}
+    {% include "@components/pagination/pagination.twig" %}
 {% endblock %}

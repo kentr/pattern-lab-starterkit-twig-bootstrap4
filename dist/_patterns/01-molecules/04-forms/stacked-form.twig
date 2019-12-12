@@ -13,10 +13,10 @@
   </div>
 
   <div class="form-group">
-    {% include 'components-checkbox' %}
+    {% include '@components/form/checkbox.twig' %}
   </div>
 
-  {% include "_bootstrap-button" with {
+  {% include "@bootstrap/button/button.twig" with {
     html_tag: "input",
     type: "primary",
     attributes: attributes.setAttribute("value", "Submit")

@@ -1,27 +1,26 @@
 {% extends "@templates/00-layouts/01-page-1col.twig" %}
 {% block hero %}
     {% if emergency %}
-        {% include "@molecules/07-messaging/00-alert.twig" with emergency %}
+        {% include "@bootstrap/alert/alert.twig" with {
+          "type": "danger",
+          "heading": "#{ color|capitalize }!",
+          "content": "This is a #{ color } alert with a heading."
+        } %}
     {% endif %}
     {% if hero %}
-        {% include "molecules-hero" %}
+        {% include "@molecules/02-blocks/02-hero.twig" %}
     {% endif %}
 {% endblock %}
 
 {% block main %}
   <div class="row">
+    {% for i in 0..3 %}
 
     <div class="col-md-4">
-    {% include "molecules-card" %}
+    {% include "@molecules/02-blocks/card.twig" %}
     </div>
 
-    <div class="col-md-4">
-    {% include "molecules-card" %}
-    </div>
-
-    <div class="col-md-4">
-    {% include "molecules-card" %}
-    </div>
+    {% endfor %}
 
   </div>
 {% endblock %}

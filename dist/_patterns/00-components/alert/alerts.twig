@@ -1,5 +1,5 @@
 {% for color in colorCodes %}
-  {% embed "_bootstrap-alert" with {
+  {% embed "@bootstrap/alert/alert.twig" with {
     "type": color,
     "content": "This is a dismissable #{ color } alert."
   } %}
@@ -7,7 +7,7 @@
 {% endfor %}
 
 {% set color = "danger" %}
-{% embed "_bootstrap-alert" with {
+{% embed "@bootstrap/alert/alert.twig" with {
   "type": color,
   "heading": "#{ color|capitalize }!",
   "content": "This is a #{ color } alert with a heading."

@@ -1,5 +1,5 @@
 {% for type in colorCodes %}
-  {% embed "_bootstrap-button" with {
+  {% embed "@bootstrap/button/button.twig" with {
     type: type,
     content: "#{ type|capitalize }",
     size: "sm"
