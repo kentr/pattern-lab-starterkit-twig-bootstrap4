@@ -107,10 +107,17 @@
     "twig": {
       "namespaces": [
         {
-          "id": "atoms",
+          "id": "bootstrap",
           "recursive": true,
           "paths": [
-            "source/_patterns/00-atoms"
+            "source/_patterns/_bootstrap"
+          ]
+        },
+        {
+          "id": "components",
+          "recursive": true,
+          "paths": [
+            "source/_patterns/00-components"
           ]
         },
         {
