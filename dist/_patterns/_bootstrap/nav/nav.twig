@@ -52,7 +52,7 @@
               data-toggle="dropdown"
             >{{ item.title }}</a>
             {% if item.below %}
-              {% include '@_bootstrap/dropdown/dropdown-menu.twig' with {
+              {% include '@bootstrap/dropdown/dropdown-menu.twig' with {
                 items: item.below
               } %}
             {% endif %}

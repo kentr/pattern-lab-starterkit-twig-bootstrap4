@@ -1,7 +1,7 @@
 {% set image %}
-    {% include "components-landscape-4x3" %}
+    {% include "@components/image/landscape-4x3.twig" %}
 {% endset %}
 
-{% include "_bootstrap-figure" with {
+{% include "@bootstrap/figure/figure.twig" with {
   caption: "This is a caption"
 } %}

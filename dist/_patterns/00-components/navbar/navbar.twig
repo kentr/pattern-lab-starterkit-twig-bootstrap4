@@ -1,17 +1,17 @@
-{% embed '_bootstrap-navbar' with {
+{% embed '@bootstrap/navbar/navbar.twig' with {
   color: 'light',
   utility_classes: ['bg-light'],
 } %}
 
   {% block branding %}
     <a class="navbar-brand w-25 p-0 mr-0 mr-lg-2" href="{{ url }}">
-    {% include "components-logo" with {utility_classes: []} %}
+    {% include "@components/image/logo.twig" with {utility_classes: []} %}
     </a>
   {% endblock %}
 
   {% block left %}
       <div class="mr-auto">
-        {% include "_bootstrap-nav" with {
+        {% include "@bootstrap/nav/nav.twig" with {
           items: nav_items,
           utility_classes: ['navbar-nav']
         } %}

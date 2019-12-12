@@ -1,7 +1,6 @@
 {% for type in colorCodes %}
-  {% embed "_bootstrap-badge" with {
+	{% embed "@bootstrap/badge/badge.twig" with {
     type: type,
     content: "#{ type|capitalize }"
-  } %}
-  {% endembed %}
+  } %}{% endembed %}
 {% endfor %}
