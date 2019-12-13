@@ -1,7 +1,7 @@
 {% extends "@templates/00-layouts/01-page-1col.twig" %}
 {% block hero %}
     {% if emergency %}
-        {% include "@bootstrap/alert/alert.twig" with {
+        {% include "@_bootstrap/alert/alert.twig" with {
           "type": "danger",
           "heading": "#{ color|capitalize }!",
           "content": "This is a #{ color } alert with a heading."

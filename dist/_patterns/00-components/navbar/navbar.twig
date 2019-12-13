@@ -1,4 +1,4 @@
-{% embed '@bootstrap/navbar/navbar.twig' with {
+{% embed '@_bootstrap/navbar/navbar.twig' with {
   color: 'light',
   utility_classes: ['bg-light'],
 } %}
@@ -11,7 +11,7 @@
 
   {% block left %}
       <div class="mr-auto">
-        {% include "@bootstrap/nav/nav.twig" with {
+        {% include "@_bootstrap/nav/nav.twig" with {
           items: nav_items,
           utility_classes: ['navbar-nav']
         } %}
