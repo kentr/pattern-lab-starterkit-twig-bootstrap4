@@ -107,7 +107,7 @@
     "twig": {
       "namespaces": [
         {
-          "id": "bootstrap",
+          "id": "_bootstrap",
           "recursive": true,
           "paths": [
             "source/_patterns/_bootstrap"
