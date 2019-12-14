@@ -20,14 +20,14 @@
 {% if path %}
   <a href="{{ path }}" class="navbar-brand d-flex align-items-center {{ utility_classes }}" aria-label="{{ text }}">
     {% if image %}
-      {{ navbar_brand.image(image, width, height, alt) }}
+      {{ navbar_brand.image(image.src, image.width, image.height, image.alt) }}
     {% endif %}
     {{ text }}
   </a>
 {% else %}
   <span class="navbar-brand h1 mb-0 {{ utility_classes }}" aria-label="{{ text }}">
     {% if image %}
-      {{ navbar_brand.image(image, alt) }}
+      {{ navbar_brand.image(src, alt) }}
     {% endif %}
     {{ text }}
   </span>

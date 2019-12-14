@@ -3,10 +3,22 @@
   utility_classes: ['bg-light'],
 } %}
 
-  {% block branding %}
+  {# {% block branding %}
     <a class="navbar-brand w-25 p-0 mr-0 mr-lg-2" href="{{ url }}">
     {% include "@components/image/logo.twig" with {utility_classes: []} %}
     </a>
+  {% endblock %} #}
+
+  {% block branding %}
+    {% include "@_bootstrap/navbar/navbar-brand.twig" with {
+      path: url,
+      text: "Branding text",
+      image: {
+        src: "../../images/logo.png",
+        alt: "logo",
+        width: 90
+      }
+    } %}
   {% endblock %}
 
   {% block left %}
