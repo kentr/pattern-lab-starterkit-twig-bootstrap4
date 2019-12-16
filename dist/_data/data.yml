@@ -10,6 +10,12 @@ colorCodes:
 - info
 - light
 - dark
+# Text colors that should have a dark background in the Patter Lab UI.
+# Adjust as necessary for your theme.
+textBgDark:
+  - light
+  - white
+  - white-50
 day:
   long: '01'
   ordinal: st
