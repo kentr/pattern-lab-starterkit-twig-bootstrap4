@@ -27,6 +27,8 @@
   {% include "@_bootstrap/button/button.twig" with {
     html_tag: "input",
     type: "primary",
-    attributes: attributes.setAttribute("value", "Submit")
+    attributes: attributes
+      .setAttribute("type", "submit")
+      .setAttribute("value", "Submit")
   } %}
 </form>
