@@ -21,13 +21,13 @@
 
 {% if items %}
   <nav class="{{ utility_classes|join(' ') }}" role="navigation" aria-labelledby="pagination-heading">
-    <h4 id="pagination-heading" class="visually-hidden">{{ 'Pagination' }}</h4>
+    <h4 id="pagination-heading" class="sr-only">{{ 'Pagination' }}</h4>
     <ul class="pagination pager__items js-pager__items {{ size ? 'pagination-' ~ size }} {{ alignment }}">
       {# Print first item if we are not on the first page. #}
       {% if items.first %}
         <li class="page-item pager__item pager__item--first">
           <a href="{{ items.first.href }}" title="{{ 'Go to first page' }}"{#{ items.first.attributes }#} class="page-link">
-            <span class="visually-hidden">{{ 'First page' }}</span>
+            <span class="sr-only">{{ 'First page' }}</span>
             <span aria-hidden="true">{{ items.first.text|default('« First') }}</span>
           </a>
         </li>
@@ -36,7 +36,7 @@
       {% if items.previous %}
         <li class="page-item pager__item pager__item--previous">
           <a href="{{ items.previous.href }}" title="{{ 'Go to previous page' }}" rel="prev"{#{ items.previous.attributes }#} class="page-link">
-            <span class="visually-hidden">{{ 'Previous page' }}</span>
+            <span class="sr-only">{{ 'Previous page' }}</span>
             <span aria-hidden="true">{{ items.previous.text|default('‹ Previous') }}</span>
           </a>
         </li>
@@ -54,7 +54,7 @@
             {% set title = "Go to page #{ key }" %}
           {% endif %}
           <a href="{{ item.href }}" title="{{ title }}"{#{ item.attributes }#} class="page-link">
-            <span class="visually-hidden">
+            <span class="sr-only">
               {{ current == key ? 'Current page' : 'Page' }}
             </span>
             {{- key -}}
@@ -62,7 +62,9 @@
         </li>
       {% endfor %}
 
-
+      {#
+        @todo Remove this.  It's related to the Drupal views mini pager.
+      #}
       {% if items.current and (items.previous or items.next) %}
         <li class="page-item disabled">
 
@@ -79,7 +81,7 @@
       {% if items.next %}
         <li class="page-item pager__item pager__item--next">
           <a href="{{ items.next.href }}" title="{{ 'Go to next page' }}" rel="next"{#{ items.next.attributes }#} class="page-link">
-            <span class="visually-hidden">{{ 'Next page' }}</span>
+            <span class="sr-only">{{ 'Next page' }}</span>
             <span aria-hidden="true">{{ items.next.text|default('Next ›') }}</span>
           </a>
         </li>
@@ -88,7 +90,7 @@
       {% if items.last %}
         <li class="page-item pager__item pager__item--last">
           <a href="{{ items.last.href }}" title="{{ 'Go to last page' }}"{#{ items.last.attributes }#} class="page-link">
-            <span class="visually-hidden">{{ 'Last page' }}</span>
+            <span class="sr-only">{{ 'Last page' }}</span>
             <span aria-hidden="true">{{ items.last.text|default('Last »') }}</span>
           </a>
         </li>
