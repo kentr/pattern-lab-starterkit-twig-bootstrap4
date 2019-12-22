@@ -10,7 +10,7 @@
   @param string label
     String to be added to the `label` attribute.  If omitted, the `name`
     parameter will be used.
-    If `false`, the label will be omitted.
+    If `false`, the label will be omitted entirely (even to screen readers).
   @param string placeholder
     String to use for the `placeholder` attribute.
   @param string size
@@ -18,14 +18,19 @@
   @param string|integer size
     String or integer to use for the `size` attribute.
   @param boolean required
-    If true, the field will have the `required` attribute.
+    If `true`, the field will have the `required` attribute.
+  @param boolean show_label
+    If `false`, the label will be visually-hidden.
+    Defaults to `true`.
 #}
-{% macro input(name, type, classes, label, placeholder, value, size, required) %}
-    {% set show_label = label is not same as(false) %}
-        {% if show_label %}
-            <label>{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
-        {% endif %}
-        <input class="form-control {{ classes }}" type="{{ type|default('text') }}" name="{{ name }}" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
+{% macro input(name, type, classes, label, placeholder, value, size, required, show_label = true) %}
+    {% set id = 'input' ~ name|title %}
+
+    {% if label is not same as(false) %}
+        <label for="{{ id }}"{% if not show_label %} class="sr-only"{% endif %}
+         >{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
+    {% endif %}
+    <input id="{{ id }}" class="form-control {{ classes }}" type="{{ type|default('text') }}" name="{{ name }}" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
 {% endmacro %}
 
 {#
@@ -43,8 +48,8 @@
     String to be added to the `class` attribute.
 #}
 {% macro textarea(label, placeholder, rows, classes) %}
-    {% set show_label = label is not same as(false) %}
-        {% if show_label %}
+    {% set include_label = label is not same as(false) %}
+        {% if include_label %}
             <label for="exampleFormControlTextarea">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}</label>
         {% endif %}
         <textarea class="form-control {{ classes }}" id="exampleFormControlTextarea" placeholder="{{ placeholder|default(name|title) }}" rows="{{ rows|default(3) }}"{% if required %} required{% endif %}></textarea>
