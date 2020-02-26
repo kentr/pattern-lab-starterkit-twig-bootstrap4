@@ -1,0 +1,13 @@
+{#
+  Creates simple FPO paragraphs.
+
+  @param int num
+    Number of paragraphs to create.
+  @param string content
+    The content of the paragraphs.
+#}
+{% macro paragraphs(num = 1, content = 'FPO text.') %}
+  {% for i in 1..num %}
+    <p>{{ content }}</p>
+  {% endfor %}
+{% endmacro %}
