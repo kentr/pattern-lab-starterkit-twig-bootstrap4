@@ -1,0 +1,10 @@
+<figure class="figure">
+  {% include "@_bootstrap/image/image.twig" with {
+      src: img.square.src,
+      alt: img.square.alt,
+      responsive: true,
+      utility_classes: ["figure-img",]
+    }
+  %}
+  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+</figure>
